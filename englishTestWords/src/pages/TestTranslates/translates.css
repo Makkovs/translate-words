@@ -1,0 +1,7 @@
+.test_uk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10vh 10vw;
+}

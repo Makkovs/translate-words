@@ -1,0 +1,10 @@
+.add_word {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_word__input {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}

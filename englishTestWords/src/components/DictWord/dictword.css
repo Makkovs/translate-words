@@ -1,0 +1,5 @@
+.word__delete {
+    margin-left: 5px;
+    color: #a00909;
+    cursor: pointer;
+}

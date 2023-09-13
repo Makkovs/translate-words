@@ -1,0 +1,18 @@
+.rating__view {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.rating__view--green {
+    background-color: #3fb906;
+}
+
+.rating__view--yellow {
+    background-color: #d8d52a;
+}
+
+.rating__view--red {
+    background-color: #da0101;
+}

@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 20px;
+    border-bottom: 2px dashed #000000;
+}
+
+.navigation__links {
+    display: flex;
+}
+
+.navigation__button {
+    margin-left: 10vw;
+}
+
+.navigation__link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation__link:hover {
+    color: #3b3b3b;
+    text-decoration: underline;
+}

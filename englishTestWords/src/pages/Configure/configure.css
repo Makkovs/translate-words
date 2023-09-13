@@ -1,0 +1,42 @@
+.configure {
+    padding: 10vh 10vw;
+}
+
+.dict__table {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px;
+    margin-top: 2px;
+    border: 1px dashed black;
+}
+
+.word__param {
+    display: inline-block;
+}
+
+.dict__add_word {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button--add_word {
+    color: #ffffff;
+    background: #616161;
+    border-radius: 50%;
+    padding: 10px 14px;
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.button--add_word:hover {
+    background: #9b9b9b
+}
