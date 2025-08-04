@@ -5,15 +5,15 @@ import DictWord from "../../components/DictWord/DictWord";
 import AddWord from "../../components/AddWord/AddWord";
 
 import "./configure.css";
+import AddJSON from "../../components/AddJSON/AddJSON";
 
 const ConfigurePage = () => {
 
     const [visible, setVisible] = useState(false);
+    const [jsonVisible, setJsonVisible] = useState(false);
 
     const [words, setWords] = useState([]);
     const [statuses, setStatuses] = useState([]);
-
-
 
     useEffect(() => {
         const localWords = localStorage.getItem("words") || [];
@@ -43,6 +43,14 @@ const ConfigurePage = () => {
         setStatuses([...statuses, true]);
         localStorage.setItem("words", JSON.stringify([...words, newWord]));
     };
+
+    const addWordsFromJson = (words) => {
+        setJsonVisible(false);
+        const parsed = JSON.parse(words);
+        setWords([...parsed]);
+        setStatuses(Array(parsed.length).fill(true));
+        localStorage.setItem("words", words);
+    }
 
     const deleteWord = (id) => {
         const newWords = words.filter(word => word.id !== id);
@@ -125,8 +133,13 @@ const ConfigurePage = () => {
                 </div>
                 <Modal visible={visible} setVisible={setVisible}>
                     <AddWord
-                        addWord={addWord}
+                        addWord={addWord} setVisible={setVisible} setJsonVisible={setJsonVisible}
                     />
+                </Modal>
+                <Modal visible={jsonVisible} setVisible={setJsonVisible}>
+                  <AddJSON 
+                      addWordsFromJson={addWordsFromJson}
+                  />
                 </Modal>
             </article>
         </main>

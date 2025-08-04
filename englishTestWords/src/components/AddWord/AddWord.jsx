@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 import "./addword.css";
 
-const AddWord = ({ addWord }) => {
+const AddWord = ({ addWord, setVisible, setJsonVisible }) => {
 
     const wordInputRef = useRef(null);
     const tranlateInputRef = useRef(null);
@@ -27,6 +27,11 @@ const AddWord = ({ addWord }) => {
         };
     };
 
+    const changeJsonVisible = () => {
+        setVisible(false)
+        setJsonVisible(true)
+    }
+
     return (
         <div className="add_word">
             <input
@@ -48,6 +53,12 @@ const AddWord = ({ addWord }) => {
                 onClick={newWord}
             >
                 Додати слово
+            </button>
+            <button
+              className="add_word__button"
+              onClick={changeJsonVisible}
+            >
+              Додати JSON 
             </button>
         </div>
     );

@@ -1,0 +1,10 @@
+.add_json {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.add_json__button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
